@@ -1,10 +1,10 @@
-# 🌤️ SKYLOK — Weather Forecasting App
+# 🌤️ SKYLOOK — Weather Forecasting App
 
 A dynamic, visually striking weather app built with React and the an API
 
 
 | Feature | Details |
-|---|---|
+
 | 🔍 City Search | Search any city worldwide with autocomplete from recent history |
 | 📍 Geolocation | Detect your current location automatically |
 | 🌡️ Current Weather | Temp, feels-like, humidity, wind, pressure, visibility |
