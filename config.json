@@ -1,0 +1,22 @@
+{
+  "app": {
+    "name": "SKYPULSE",
+    "tagline": "weather",
+    "version": "1.0.0"
+  },
+  "api": {
+    "baseUrl": "https://api.openweathermap.org/data/2.5",
+    "units": "metric",
+    "forecastDays": 5
+  },
+  "defaults": {
+    "unit": "C",
+    "maxRecentCities": 5,
+    "recentCitiesKey": "wx_recents"
+  },
+  "ui": {
+    "hourlyIntervalHours": 3,
+    "visibilityPrecision": 1,
+    "windUnitLabel": "km/h"
+  }
+}
