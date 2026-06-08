@@ -5,7 +5,7 @@
     "version": "1.0.0"
   },
   "api": {
-    "baseUrl": "https://api.openweathermap.org/data/2.5",
+    "baseUrl": "REACT_APP_OWM_KEY",
     "units": "metric",
     "forecastDays": 5
   },

@@ -12,9 +12,9 @@ import {
   getHourlyForDay,
   resolveWeatherIcon,
 } from "./utils/utils";
-import styles from "./styles/app.css";   // see app.css
+import styles from "./styles/app.css";   
 
-// ─── MAIN COMPONENT ──────────────────────────────────────────────────────────
+
 export default function WeatherApp() {
   const {
     weather,
@@ -31,7 +31,7 @@ export default function WeatherApp() {
   const [selDay,  setSelDay]  = useState(0);
   const [showSug, setShowSug] = useState(false);
 
-  // ── helpers ────────────────────────────────────────────────────────────────
+ 
   const T = (c) => formatTemp(c, unit);
 
   const handleSubmit = (e) => {
@@ -53,7 +53,6 @@ export default function WeatherApp() {
     setSelDay(0);
   };
 
-  // ── derived data ───────────────────────────────────────────────────────────
   const dailyForecast  = forecast ? groupForecastByDay(forecast.list) : [];
   const hourlyForecast = forecast && dailyForecast.length
     ? getHourlyForDay(forecast.list, dailyForecast[selDay].dt)
@@ -63,7 +62,6 @@ export default function WeatherApp() {
     (r) => !query || r.toLowerCase().startsWith(query.toLowerCase())
   );
 
-  // ── render ─────────────────────────────────────────────────────────────────
   return (
     <>
       <div className="bg-mesh" />

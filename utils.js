@@ -17,10 +17,10 @@ export const celsiusToFahrenheit = (celsius) => Math.round(celsius * 9 / 5 + 32)
 export const roundTemp = (value) => Math.round(value);
 
 /**
- * Format a temperature with its unit label
- * @param {number} celsius - temperature in Celsius
- * @param {"C"|"F"} unit  - desired output unit
- * @returns {string}       e.g. "22°C" or "72°F"
+ 
+ * @param {number} celsius 
+ * @param {"C"|"F"} unit  
+ * @returns {string}       
  */
 export const formatTemp = (celsius, unit) => {
   const value = unit === "C" ? roundTemp(celsius) : celsiusToFahrenheit(celsius);
@@ -30,14 +30,14 @@ export const formatTemp = (celsius, unit) => {
 
 
 /**
- * Convert wind speed from m/s to km/h
+ 
  * @param {number} ms - speed in metres per second
  * @returns {number}
  */
 export const msToKmh = (ms) => Math.round(ms * 3.6);
 
 /**
- * Convert a wind bearing in degrees to a compass label
+ 
  * @param {number} degrees - 0–360
  * @returns {string}        e.g. "NW"
  */
@@ -46,19 +46,19 @@ export const degreesToCompass = (degrees) => {
   return COMPASS_DIRS[index];
 };
 
-// ─── VISIBILITY ───────────────────────────────────────────────────────────────
+
 
 /**
- * Convert visibility from metres to kilometres (1 decimal place)
+ 
  * @param {number} metres
  * @returns {string}  e.g. "9.5"
  */
 export const metresToKm = (metres) => ((metres || 10000) / 1000).toFixed(1);
 
-// ─── DATE & TIME ─────────────────────────────────────────────────────────────
+
 
 /**
- * Format a Unix timestamp as a short weekday name
+ 
  * @param {number} unixTs - Unix timestamp (seconds)
  * @returns {string}        e.g. "Mon"
  */
@@ -66,7 +66,7 @@ export const toDayName = (unixTs) =>
   new Date(unixTs * 1000).toLocaleDateString("en-US", { weekday: "short" });
 
 /**
- * Format a Unix timestamp as a 12-hour time string
+ 
  * @param {number} unixTs - Unix timestamp (seconds)
  * @returns {string}        e.g. "06:32 AM"
  */
@@ -77,7 +77,7 @@ export const toTimeString = (unixTs) =>
   });
 
 /**
- * Format today's date as a human-readable string
+ 
  * @returns {string}  e.g. "Thursday, May 14, 2026"
  */
 export const todayString = () =>
@@ -88,17 +88,17 @@ export const todayString = () =>
     year: "numeric",
   });
 
-// ─── WEATHER ICONS ───────────────────────────────────────────────────────────
+
 
 /**
- * Resolve an OWM icon code to an [emoji, label] pair
+ 
  * @param {string} iconCode - e.g. "02d"
  * @returns {[string, string]}
  */
 export const resolveWeatherIcon = (iconCode) =>
   WEATHER_ICONS[iconCode] || WEATHER_ICON_FALLBACK;
 
-// ─── FORECAST PROCESSING ─────────────────────────────────────────────────────
+
 
 /**
 
