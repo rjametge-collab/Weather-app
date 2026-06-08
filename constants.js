@@ -1,5 +1,4 @@
-// ─── WEATHER ICON MAP ────────────────────────────────────────────────────────
-// Maps OpenWeatherMap icon codes to [emoji, label] pairs
+// ─── WEATHER ICONS ──────────────────────────────────────────────────────────
 export const WEATHER_ICONS = {
   "01d": ["☀️", "Clear"],
   "01n": ["🌙", "Clear"],
@@ -21,20 +20,18 @@ export const WEATHER_ICONS = {
   "50n": ["🌫️", "Fog"],
 };
 
-// Default fallback for unknown icon codes
 export const WEATHER_ICON_FALLBACK = ["🌡️", "Unknown"];
 
-// ─── COMPASS DIRECTIONS ──────────────────────────────────────────────────────
+
 export const COMPASS_DIRS = ["N", "NE", "E", "SE", "S", "SW", "W", "NW"];
 
-// ─── UNIT LABELS ─────────────────────────────────────────────────────────────
+
 export const UNIT_LABELS = {
   C: "°C",
   F: "°F",
 };
 
-// ─── STAT CONFIG ─────────────────────────────────────────────────────────────
-// Defines the 4 stat tiles shown in the current weather card
+
 export const STAT_CONFIG = [
   { key: "humidity",   label: "Humidity",   unit: "%",    path: "main.humidity" },
   { key: "wind",       label: "Wind",       unit: "km/h", path: "wind.speed"    },

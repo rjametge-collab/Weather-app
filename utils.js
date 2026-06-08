@@ -1,16 +1,16 @@
 import { WEATHER_ICONS, WEATHER_ICON_FALLBACK, COMPASS_DIRS } from "../constants/constants";
 
-// ─── TEMPERATURE ─────────────────────────────────────────────────────────────
+
 
 /**
- * Convert Celsius to Fahrenheit
+
  * @param {number} celsius
  * @returns {number}
  */
 export const celsiusToFahrenheit = (celsius) => Math.round(celsius * 9 / 5 + 32);
 
 /**
- * Round a temperature value to the nearest integer
+ 
  * @param {number} value
  * @returns {number}
  */
@@ -27,7 +27,7 @@ export const formatTemp = (celsius, unit) => {
   return `${value}°${unit}`;
 };
 
-// ─── WIND ─────────────────────────────────────────────────────────────────────
+
 
 /**
  * Convert wind speed from m/s to km/h
@@ -101,9 +101,7 @@ export const resolveWeatherIcon = (iconCode) =>
 // ─── FORECAST PROCESSING ─────────────────────────────────────────────────────
 
 /**
- * Group a flat list of 3-hourly forecast slots into daily summaries.
- * Returns at most `maxDays` days.
- *
+
  * @param {Array}  forecastList - items from OWM /forecast response
  * @param {number} maxDays      - how many days to return (default 5)
  * @returns {Array<{dt, high, low, icon, desc, pop}>}
@@ -133,8 +131,7 @@ export const groupForecastByDay = (forecastList, maxDays = 5) => {
 };
 
 /**
- * Filter a flat forecast list to only slots that fall on a given day.
- *
+ 
  * @param {Array}  forecastList - items from OWM /forecast response
  * @param {number} dayUnixTs    - Unix timestamp of the target day
  * @returns {Array}
@@ -146,13 +143,13 @@ export const getHourlyForDay = (forecastList, dayUnixTs) => {
   );
 };
 
-// ─── RECENT CITIES (localStorage) ────────────────────────────────────────────
+
 
 const RECENTS_KEY = "wx_recents";
 const MAX_RECENTS = 5;
 
 /**
- * Load recent city names from localStorage
+ 
  * @returns {string[]}
  */
 export const loadRecentCities = () => {
@@ -164,7 +161,7 @@ export const loadRecentCities = () => {
 };
 
 /**
- * Persist a city to the recent-cities list (deduped, max 5)
+ 
  * @param {string} cityName
  */
 export const saveRecentCity = (cityName) => {

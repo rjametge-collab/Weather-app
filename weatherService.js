@@ -2,14 +2,11 @@ import config from "../config.json";
 
 const { baseUrl, units } = config.api;
 
-// ─── Replace with your OpenWeatherMap API key ─────────────────────────────────
-// For production: use process.env.REACT_APP_OWM_KEY instead
 const API_KEY = process.env.REACT_APP_OWM_KEY;
 
-// ─── LOW-LEVEL FETCH HELPER ───────────────────────────────────────────────────
 
 /**
- * Perform a fetch and throw a readable error if the response is not OK.
+ 
  * @param {string} url
  * @returns {Promise<object>}
  */
@@ -22,7 +19,7 @@ const apiFetch = async (url) => {
   return res.json();
 };
 
-// ─── ENDPOINT BUILDERS ───────────────────────────────────────────────────────
+
 
 const buildCityParams  = (city) =>
   `q=${encodeURIComponent(city)}&appid=${API_KEY}&units=${units}`;
@@ -30,10 +27,8 @@ const buildCityParams  = (city) =>
 const buildCoordsParams = (lat, lon) =>
   `lat=${lat}&lon=${lon}&appid=${API_KEY}&units=${units}`;
 
-// ─── PUBLIC API ───────────────────────────────────────────────────────────────
-
 /**
- * Fetch current weather + 5-day forecast for a city name.
+ 
  * @param {string} city
  * @returns {Promise<{ weather: object, forecast: object }>}
  */
@@ -47,7 +42,7 @@ export const fetchWeatherByCity = async (city) => {
 };
 
 /**
- * Fetch current weather + 5-day forecast for geographic coordinates.
+ 
  * @param {number} lat
  * @param {number} lon
  * @returns {Promise<{ weather: object, forecast: object }>}
@@ -62,7 +57,7 @@ export const fetchWeatherByCoords = async (lat, lon) => {
 };
 
 /**
- * Ask the browser for the user's current position, then fetch weather.
+ 
  * @returns {Promise<{ weather: object, forecast: object }>}
  */
 export const fetchWeatherByGeolocation = () =>

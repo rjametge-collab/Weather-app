@@ -6,21 +6,7 @@ import {
 import { saveRecentCity, loadRecentCities } from "../utils/utils";
 import { ERRORS } from "../constants/constants";
 
-/**
- * useWeather
- *
- * Custom React hook that encapsulates all weather state and fetch logic.
- * Keeps WeatherApp.jsx clean — it only deals with rendering.
- *
- * Returns:
- *   weather       — current weather object (OWM shape) or null
- *   forecast      — 5-day forecast object (OWM shape) or null
- *   loading       — boolean
- *   error         — string or ""
- *   recentCities  — string[]
- *   searchCity    — (cityName: string) => void
- *   searchByGeo   — () => void
- */
+
 const useWeather = () => {
   const [weather,      setWeather]      = useState(null);
   const [forecast,     setForecast]     = useState(null);
@@ -28,7 +14,6 @@ const useWeather = () => {
   const [error,        setError]        = useState("");
   const [recentCities, setRecentCities] = useState(loadRecentCities);
 
-  // ── shared post-fetch handler ──────────────────────────────────────────────
   const handleSuccess = useCallback(({ weather: w, forecast: f }) => {
     setWeather(w);
     setForecast(f);
@@ -47,7 +32,6 @@ const useWeather = () => {
     );
   }, []);
 
-  // ── search by city name ───────────────────────────────────────────────────
   const searchCity = useCallback(async (city) => {
     if (!city.trim()) return;
     setLoading(true);
@@ -61,7 +45,6 @@ const useWeather = () => {
     }
   }, [handleSuccess, handleError]);
 
-  // ── search by browser geolocation ────────────────────────────────────────
   const searchByGeo = useCallback(async () => {
     setLoading(true);
     try {

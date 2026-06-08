@@ -1,5 +1,5 @@
 {
-  "name": "skypulse-weather-app",
+  "name": "skylook-weather-app",
   "version": "1.0.0",
   "description": "A dynamic weather forecasting app built with React and OpenWeatherMap API",
   "private": true,
