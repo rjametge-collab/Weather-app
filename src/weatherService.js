@@ -2,7 +2,7 @@ import config from "./config.json";
 
 const { baseUrl, units } = config.api;
 
-const API_KEY = process.env.REACT_APP_OWM_KEY;
+const API_KEY = process.env.VITE_APP_OWM_KEY;
 
 
 /**
