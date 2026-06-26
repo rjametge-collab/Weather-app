@@ -3,7 +3,7 @@ import {
   fetchWeatherByCity,
   fetchWeatherByGeolocation,
 } from "./weatherService";
-import { saveRecentCity, loadRecentCities } from "../utils/utils";
+import { saveRecentCity, loadRecentCities } from "./utils";
 import { ERRORS } from "../constants/constants";
 
 

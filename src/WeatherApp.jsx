@@ -11,7 +11,7 @@ import {
   groupForecastByDay,
   getHourlyForDay,
   resolveWeatherIcon,
-} from "./utils/utils";
+} from "./utils";
 import styles from "./styles/app.css";   
 
 
