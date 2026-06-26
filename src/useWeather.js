@@ -2,7 +2,7 @@ import { useState, useCallback } from "react";
 import {
   fetchWeatherByCity,
   fetchWeatherByGeolocation,
-} from "../services/weatherService";
+} from "./weatherService";
 import { saveRecentCity, loadRecentCities } from "../utils/utils";
 import { ERRORS } from "../constants/constants";
 

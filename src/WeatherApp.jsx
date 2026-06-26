@@ -1,5 +1,5 @@
 import { useState } from "react";
-import useWeather from "./services/useWeather";
+import useWeather from "./useWeather";
 import {
   formatTemp,
   msToKmh,
