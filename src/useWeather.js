@@ -4,7 +4,7 @@ import {
   fetchWeatherByGeolocation,
 } from "./weatherService";
 import { saveRecentCity, loadRecentCities } from "./utils";
-import { ERRORS } from "../constants/constants";
+import { ERRORS } from "./constants";
 
 
 const useWeather = () => {
