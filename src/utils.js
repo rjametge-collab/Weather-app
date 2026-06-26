@@ -1,4 +1,4 @@
-import { WEATHER_ICONS, WEATHER_ICON_FALLBACK, COMPASS_DIRS } from "../constants/constants";
+import { WEATHER_ICONS, WEATHER_ICON_FALLBACK, COMPASS_DIRS } from "./constants";
 
 
 
