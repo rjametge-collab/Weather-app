@@ -12,7 +12,7 @@ import {
   getHourlyForDay,
   resolveWeatherIcon,
 } from "./utils";
-import styles from "./styles/app.css";   
+import styles from "./app.css";   
 
 
 export default function WeatherApp() {
